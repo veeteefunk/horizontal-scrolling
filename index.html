@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Horizontal Scrolling | CSS & jQuery</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="section">
+        <div class="content">
+          <div class="text">
+            <h1>Section One</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eos tempore libero eveniet natus vel eaque necessitatibus velit
+              tenetur consequatur, magni earum illo commodi minus! Harum,
+              corporis incidunt magni nostrum asperiores quibusdam eaque eveniet
+              voluptas possimus ipsum, quos, minus nesciunt expedita? Sint
+              quaerat unde, dicta odit dolores cumque minima illum!
+            </p>
+          </div>
+          <img src="1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="content">
+          <div class="text">
+            <h1>Section Two</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eos tempore libero eveniet natus vel eaque necessitatibus velit
+              tenetur consequatur, magni earum illo commodi minus! Harum,
+              corporis incidunt magni nostrum asperiores quibusdam eaque eveniet
+              voluptas possimus ipsum, quos, minus nesciunt expedita? Sint
+              quaerat unde, dicta odit dolores cumque minima illum!
+            </p>
+          </div>
+          <img src="2.jpg" alt="" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="content">
+          <div class="text">
+            <h1>Section Three</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eos tempore libero eveniet natus vel eaque necessitatibus velit
+              tenetur consequatur, magni earum illo commodi minus! Harum,
+              corporis incidunt magni nostrum asperiores quibusdam eaque eveniet
+              voluptas possimus ipsum, quos, minus nesciunt expedita? Sint
+              quaerat unde, dicta odit dolores cumque minima illum!
+            </p>
+          </div>
+          <img src="3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="content">
+          <div class="text">
+            <h1>Section Four</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eos tempore libero eveniet natus vel eaque necessitatibus velit
+              tenetur consequatur, magni earum illo commodi minus! Harum,
+              corporis incidunt magni nostrum asperiores quibusdam eaque eveniet
+              voluptas possimus ipsum, quos, minus nesciunt expedita? Sint
+              quaerat unde, dicta odit dolores cumque minima illum!
+            </p>
+          </div>
+          <img src="4.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop(),
+            dh = $(document).height(),
+            wh = $(window).height();
+            value = (scroll / (dh-wh)) * 100;
+        $('#container').css('left', - value * 3 + '%');
+        })
+    
+    </script>
+  </body>
+</html>
